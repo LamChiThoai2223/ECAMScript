@@ -48,7 +48,7 @@ https://templatemo.com/tm-571-hexashop
 
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky" id="header">
+    <header class="header-area header-sticky" id="header-index">
     </header>
     <!-- ***** Header Area End ***** -->
 
@@ -57,7 +57,7 @@ https://templatemo.com/tm-571-hexashop
         
     </div>
     <!-- ***** Main Banner Area End ***** -->
-    <div id="products-main">
+    <div id="products-main">    
            <!-- ***** Men Area Starts ***** -->
    <section class="section" id="men">
     <div class="container">
@@ -186,7 +186,7 @@ https://templatemo.com/tm-571-hexashop
     
     <!-- ***** Explore Area Ends ***** -->
     <!-- ***** Footer Start ***** -->
-    <footer id="footer">
+    <footer id="footer-index">
     </footer>
     <script src="content/js/categories.js"></script>
     <script src="content/js/product.js"></script>
@@ -209,25 +209,6 @@ https://templatemo.com/tm-571-hexashop
     <script src="content/js/isotope.js"></script>
     <!-- Global Init -->
     <script src="content/js/custom.js"></script>
-
-    <script>
-      
-        $(function () {
-            var selectedClass = "";
-            $("p").click(function () {
-                selectedClass = $(this).attr("data-rel");
-                $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("." + selectedClass).fadeOut();
-                setTimeout(function () {
-                    $("." + selectedClass).fadeIn();
-                    $("#portfolio").fadeTo(50, 1);
-                }, 500);
-
-            });
-        });
-
-    </script>
-
 </body>
 
 </html>
