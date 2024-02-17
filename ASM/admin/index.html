@@ -6,7 +6,8 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../content/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../content/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Now UI Dashboard by Creative Tim</title>
+    <title>LCStore</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -35,7 +36,7 @@
                 <ul class="nav">
                       <li class="active">
                         <a href="">
-                            <i class="now-ui-icons design_app"></i>
+                            <i class="fa fa-home"></i>
                             <p>Bảng điều khiển</p>
                         </a>
                     </li>
@@ -53,29 +54,16 @@
                     </li>
                     <li>
                         <a href="orders/index.html">
-                            <i class="now-ui-icons location_map-big"></i>
+                            <i class="fa fa-file"></i>
                             <p>Đơn hàng</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Invoice" aria-expanded="true" aria-controls="Invoice">
-                            <i class="fas fa-fw fa-folder"></i>
-                            <span>Hóa đơn</span>
+                    <li>
+                        <a href="users/index.html">
+                            <i class="fa fa-user"></i>
+                            <p>Người dùng</p>
                         </a>
-                        <div id="Invoice" class="collapse ml-lg-5" aria-labelledby="Invoice" data-parent="#accordionSidebar">
-                            <div class="now-ui-icons users_single-0 text text-light">
-                                <a href="#" class="collapse-item">
-                                    <i class="now-ui-icons location_map-big mb-3 mt-2"></i>
-                                    <p class="text-light mb-3 mt-2">Sản phẩm đặt mua</p>
-                                </a>
-                                <a href="#" class="collapse-item mt-3">
-                                    <i class="now-ui-icons location_map-big"></i>
-                                    <p class="text-light">Thống kê doanh thu</p>
-                                </a>
-                            </div>
-                        </div>
                     </li>
-
                     
                 </ul>
             </div>
@@ -97,14 +85,15 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Số sản phẩm hiện tại</div><h4>12</h4>
+                                Số sản phẩm hiện tại</div>
+                                <h4 id="QuantityProducts"></h4>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                             
 
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                           
                         </div>
                     </div>
                 </div>
@@ -118,7 +107,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Số hóa đơn</div><h4>3</h4>
+                                Tổng sản phẩm đặt mua </div>
+                                <h4 id="totalProduct"></h4>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                             
 
@@ -139,9 +129,9 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tổng tiền hóa đơn thanh toán
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Thống kê doanh thu
                             </div>
-                            <h4>1230000đ</h4>
+                            <h4 id="totalMoney"></h4>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
@@ -152,7 +142,6 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -166,13 +155,14 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Bình luận</div>
+                                Danh mục</div>
+                                <h4 id="QuantityCategory"></h4>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                     
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            
                         </div>
                     </div>
                 </div>
@@ -194,22 +184,5 @@
 <script src="../content/js/core/jquery.min.js"></script>
 <script src="../content/js/core/popper.min.js"></script>
 <script src="../content/js/core/bootstrap.min.js"></script>
-<script src="../content/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-<!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-<!-- Chart JS -->
-<script src="../content/js/plugins/chartjs.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="../content/js/plugins/bootstrap-notify.js"></script>
-<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="../content/js/now-ui-dashboard.js?v=1.0.1"></script>
-<!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-<script src="../content/demo/demo.js"></script>
-<script>
-    $(document).ready(function() {
-        // Javascript method's body can be found in ../content/js/demos.js
-        demo.initDashboardPageCharts();
-    });
-</script>
-
+<script src="../content/js/app.js"></script>
 </html>

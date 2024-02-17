@@ -186,3 +186,65 @@
     //         console.log(value);
     //     }
     // )
+// function Person(first, last, age, eye){
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eye;
+// }
+// function Car (){
+//     this.fuel = 0;
+//     this.distance = 0;
+// }
+// Car.prototype.move = function(){
+//     if(this.fuel < 1){
+//         throw new RangeError('Hết xăng rồi');
+//     }
+//     this.fuel--
+//     this.distance +=2
+// }
+// Car.prototype.addFuel = function(){
+//     if(this.fuel >=60){
+//         throw new RangeError('Xe đã đầy xăng');
+//     }
+//     this.fuel++
+// }
+// var car = new Car();
+// car.addFuel();
+// car.move();
+class Car{
+    constructor(brand){
+        this.carname =  brand;
+    }
+    present(){
+        return 'I have a '+ this.carname;
+    }
+}
+class Model extends Car{
+    constructor(brand,mod){
+        super(brand);
+        this.model = mod;
+    }
+    show(){
+        return this.present() + ', it is a' + this.model;
+    }
+}
+mycar = new Model("Ford","minivan");
+console.log(mycar.show( ));
+
+class  Student{
+    constructor(cro,fname,lname){
+        this.cro = cro ;
+        this.fname = fname;
+        this.lname = lname;
+            console.log("Bên trong hàm khởi tạo");
+    }
+    set rollno(newRollno){
+        console.log("Bên trong Setter");
+        this.rno = newRollno
+    }
+}
+let s1 = new Student(101,'Đạt','Thiện');
+console.log(s1);
+s1.rollno = 201;
+console.log(s1);

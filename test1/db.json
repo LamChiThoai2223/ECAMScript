@@ -1,0 +1,89 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Fred",
+      "author": "Flintstone",
+      "id": 2
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 3
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 4
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 3
+    },
+    {
+      "title": "Đây là bài viết số ",
+      "author": "Tính",
+      "id": 5
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 6
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 7
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 8
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 9
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 10
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 11
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 12
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 13
+    },
+    {
+      "title": "bài viết siêu hay 10 điểm",
+      "author": "Tính",
+      "id": 14
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

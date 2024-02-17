@@ -9,9 +9,9 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Hexashop - Product Listing Page</title>
-
-
+    <title>LCStore</title>
+   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="../content/css/bootstrap.min.css">
 
@@ -88,6 +88,14 @@
     letter-spacing: 1px;
     padding: 20px;
 }
+.filter .item input {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Thêm box shadow cho nút tìm kiếm */
+.filter .item.submit button {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
     </style>
     </head>
     
@@ -126,20 +134,20 @@
                     <label>Loại</label>
                     <select name="category">
                         <option value="" hidden>---</option>
-                        <option value="T-shirt">Quần</option>
-                        <option value="Shirt">Áo</option>
-                        <option value="Polo">Giày</option>
+                        <option value="1">Quần</option>
+                        <option value="2">Áo</option>
+                        <option value="3">Giày</option>
                     </select>
                 </div>
                 <div class="item">
-                    <label>Tên</label>
-                    <input name="name" type="text">
+                    <label>Từ</label>
+                    <input name="minPrice" id="minPrice" type="number" placeholder="Giá VNĐ">
                 </div>
                 <div class="item">
-                    <label>Từ</label>
-                    <input name="minPrice" type="number">
+                    <label>Đến</label>
+                    <input name="maxPrice" id=""maxPrice type="number" placeholder="Giá VNĐ">
                 </div>
-                <div class="item">  </div>
+                <div class="item"></div>
                 <div class="item"></div>
                 <div class="item submit">
                     <button>Tìm kiếm</button>

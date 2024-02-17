@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intersection Observer Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.box.show {
+  opacity: 1;
+}
+</style>
+<body>
+
+<div class="box" id="observedElement">
+  Scroll down to see the effect!
+</div>
+
+<script src="script.js"></script>
+q
+</body>
+</html>

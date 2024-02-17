@@ -1,0 +1,158 @@
+{
+  "categories": [
+    {
+      "name": "Quần",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Áo"
+    },
+    {
+      "id": 3,
+      "name": "Giày"
+    }
+  ],
+  "products": [
+    {
+      "name": "Quần kaki",
+      "image": "team-member-03.jpg",
+      "cate_id": 1,
+      "price": "120000",
+      "id": 1
+    },
+    {
+      "name": "Giày sneaker vải mesh",
+      "image": "sp08.jpg",
+      "cate_id": 3,
+      "price": "545000",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Quần VOCKOO",
+      "cate_id": 1,
+      "price": 215000,
+      "detail": "Thật thoải mái Vải mềm mại. hình dáng đẹp. Chất lượng tốt",
+      "image": "sp04.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Quần Baggy Denim SAIGONESE",
+      "cate_id": 1,
+      "price": 199000,
+      "detail": "Quần suông ống rộng lưng thun thoải mái năng động",
+      "image": "sp05.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Áo polo Ngắn Tay Form Rộng",
+      "cate_id": 2,
+      "price": 176000,
+      "detail": "In Họa Tiết retro Thời Trang Dành Cho Nam",
+      "image": "sp06.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Áo thun TEESHARKBUY",
+      "cate_id": 2,
+      "price": 131000,
+      "detail": "tay ngắn dáng rộng in chữ phong cách hip hop đường phố mỹ cá tính cho nam nữ",
+      "image": "sp07.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Giày Thể Thao Jintoho",
+      "cate_id": 3,
+      "price": 338000,
+      "detail": "Giày Thể Thao Da Thời Trang Cho Nam",
+      "image": "sp08.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Giày canvas IELGY",
+      "cate_id": 3,
+      "price": 239000,
+      "detail": "Giày canvas IELGY cổ cao buộc dây phong cách Hàn Quốc cá tính cho nữ",
+      "image": "sp09.jpg"
+    },
+    {
+      "name": "Quần short nam",
+      "image": "sp09.jpg",
+      "cate_id": 2,
+      "price": "119000",
+      "id": 10
+    },
+    {
+      "name": "As phông nam xanh BEEYANBUY",
+      "image": "sp11.jpg",
+      "cate_id": 1,
+      "price": "129000",
+      "id": 11
+    },
+    {
+      "id": 12,
+      "name": "GEWENNI giày thể thao nữ ",
+      "cate_id": 3,
+      "price": 399000,
+      "detail": "Thoáng khí thời trang 2023 dành cho nữ FYD23A13RH 44Z231031",
+      "image": "sp12.jpg"
+    },
+    {
+      "name": "áda123",
+      "image": "baner-right-image-02.jpg",
+      "cate_id": 2,
+      "price": "12312",
+      "id": 13
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customer_name": "Lâm Chí Thoại",
+      "customer_address": "Sóc Trăng",
+      "customer_email": "thoai2223@gmail.com",
+      "customer_phone_number": "0378348472",
+      "created_date": "2024-01-19",
+      "status": "Đang chờ thanh toán"
+    },
+    {
+      "id": 2,
+      "customer_name": "Phan Văn Phúc",
+      "customer_address": "An Giang",
+      "customer_email": "Phucpvpc06866@fpt.edu.vn",
+      "customer_phone_number": "0987776651",
+      "created_date": "2024-01-19",
+      "status": "Hủy thanh toán"
+    },
+    {
+      "id": 1,
+      "customer_name": "Nguyễn Văn Tùng",
+      "customer_address": "Bạc Liêu",
+      "customer_email": "tungnguyen120@gmail.com  ",
+      "customer_phone_number": "0727665210",
+      "created_date": "2024-01-19",
+      "status": "Đã thanh toán"
+    }
+  ],
+  "order_details": [
+    {
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 2,
+      "unit_price": 240000
+    },
+    {
+      "order_id": 2,
+      "product_id": 4,
+      "quantity": 1,
+      "unit_price": 215000
+    },
+    {
+      "order_id": 3,
+      "product_id": 6,
+      "quantity": 3,
+      "unit_price": 528000
+    }
+  ]
+}

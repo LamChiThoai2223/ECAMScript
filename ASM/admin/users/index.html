@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../content/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../content/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>LCStore</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="../../content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../content/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../../content/demo/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+</head>
+<style>
+    
+</style>
+<body class="">
+    <div class="wrapper ">
+        <div id="layout"></div>
+        <div class="main-panel">
+            <section class="is-title-bar">
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+                  <ul>
+                    <h3 class="mt-5"><a href="">Quản trị</a> / <a href="index.php">Danh mục</a> / <a href="#">Danh sách</a></h3>
+                </div>
+              </section>
+              <section class="is-hero-bar">
+               
+                      <div class="card">
+                        <div class="card-body">
+                          <h1 class="text-center">Danh sách Người dùng</h1>
+                          <div class="table-responsive">
+                            <table id="" class="table table-striped table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>Mã người dùng</th>
+                                  <th>Tên khách hàng</th>
+                                  <th>Địa chỉ</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Lâm Chí Thoại</th>
+                                    <th>Sóc trăng</th>
+                                    <th>
+                                        <a href="" class="btn btn-waring">Sửa</a>
+                                        <a href="" class="btn btn-danger">Xóa</a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <th>Nguyễn Văn Tùng</th>
+                                    <th>Bạc Liêu</th>
+                                    <th>
+                                        <a href="" class="btn btn-waring">Sửa</a>
+                                        <a href="" class="btn btn-danger">Xóa</a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <th>Phan Văn Phúc</th>
+                                    <th>An Giang</th>
+                                    <th>
+                                        <a href="" class="btn btn-waring">Sửa</a>
+                                        <a href="" class="btn btn-danger">Xóa</a>
+                                    </th>
+                                </tr>
+                            </tbody>
+                          </table>
+                          <button id="openAddForm" class="btn btn-success" data-toggle="modal" data-target="#addUserModal">Thêm</button>
+                        </div>
+                        </div>
+                      </div>
+                   
+              </section>
+            <footer class="footer">
+            </footer>
+        </div>
+    </div>
+    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thêm người dùng mới</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Your add categories form fields go here -->
+                <form id="addUserForm">
+                    <div class="form-group">
+                        <label for="userName">Tên người dùng:</label>
+                        <input type="text" class="form-control" id="userName"
+                            placeholder="Nhập tên người dùng">
+                    </div>
+                    <div class="form-group">
+                      <label for="userAddress">Địa chỉ:</label>
+                      <input type="text" class="form-control" id="userAddress"
+                          placeholder="Nhập địa chỉ">
+                  </div>
+                  <div class="form-group">
+                    <label for="userPhone">Số điện thoại:</label>
+                    <input type="text" class="form-control" id="userPhone"
+                        placeholder="Nhập số điện thoại">
+                  </div>
+                  <div class="form-group">
+                    <label for="userPassword">Mật khẩu:</label>
+                    <input type="password" class="form-control" id="userPassword"
+                        placeholder="Nhập mật khâu">
+                  </div>
+                  <div class="form-group">
+                    <label for="userStatus">Vai trò:</label>
+                    <select name="" class="form-control" id="userStatus">
+                      <option value="" disabled selected>Vui lòng chọn vai trò...</option>
+                      <option value="">Quản trị</option>
+                      <option value="">Khách hàng</option>
+                    </select>
+                  </div>
+                    <button type="submit" class="btn btn-primary col-12 mt-3">Thêm danh mục</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="module" src="../../content/js/importAdminAPI.js"></script>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <title>LCStore</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="../content/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../content/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../content/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="../content/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="../content/css/lightbox.css">
+    <style media="screen">
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        form {
+            height: 650px;
+            width: 550px;
+            margin-top: 12%;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: relative;
+            transform: translate(-50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+        }
+
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #000000;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        input {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            box-shadow: 0px 2px 0px 0px black;
+            border-radius: 0%;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        ::placeholder {
+            color: #191717;
+        }
+
+        button {
+            margin-top: 50px;
+            width: 100%;
+            background-color: #262323;
+            color: #f1f0f5;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .social {
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .social div {
+            background: red;
+            width: 150px;
+            border-radius: 3px;
+            padding: 5px 10px 10px 5px;
+            background-color: rgba(255, 255, 255, 0.27);
+            color: #2a2b2d;
+            text-align: center;
+        }
+
+        .social div:hover {
+            background-color: rgba(255, 255, 255, 0.47);
+        }
+
+        .social .fb {
+            margin-left: 25px;
+        }
+
+        .social i {
+            margin-right: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky" id="header">
+    </header>
+    <header id="header"></header>
+    <div class="product-list">
+    </div>
+
+    <form id="checkout-form" class="w-75 h-100">
+        <h1 class="text text-center">Thông tin thanh toán</h1>
+        <!-- Các trường nhập liệu cho thông tin thanh toán -->
+        <label for="name">Tên:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address" required>
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <!-- Thêm các trường khác như địa chỉ, tên, v.v. -->
+        <div class="row px-xl-5 mt-5">
+            <div class="col-lg-8 table-responsive mb-5">
+                <table class="table table-light table-borderless table-hover text-center mb-0">
+                    <tbody class="align-middle">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Thông
+                        tin sản phẩm</span></h5>
+                <div class="bg-light p-30 mb-5">
+                    <div class="pt-2">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5>Tổng tiền:</h5>
+                            <h5 id="totalAmount">0 đ</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Xác nhận thanh toán</button>
+    </form>
+
+    <footer id="footer"></footer>
+    <script type="module" src="../content/js/importAPI.js"></script>
+    <script src="../content/js/categories.js"></script>
+    <script src="../content/js/product.js"></script>
+    <script type="module" src="../content/js/importAPI.js"></script>
+    <!-- jQuery -->
+    <script src="../content/js/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../content/js/popper.js"></script>
+    <script src="../content/js/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="../content/js/owl-carousel.js"></script>
+    <script src="../content/js/accordions.js"></script>
+    <script src="../content/js/datepicker.js"></script>
+    <script src="../content/js/scrollreveal.min.js"></script>
+    <script src="../content/js/waypoints.min.js"></script>
+    <script src="../content/js/jquery.counterup.min.js"></script>
+    <script src="../content/js/imgfix.min.js"></script>
+    <script src="../content/js/slick.js"></script>
+    <script src="../content/js/lightbox.js"></script>
+    <script src="../content/js/isotope.js"></script>
+    <!-- Global Init -->
+    <script src="../content/js/custom.js"></script>
+    <script src="../content/js/cart.js"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

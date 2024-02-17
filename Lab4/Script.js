@@ -1,30 +1,86 @@
-fetch('https://65929f4fbb129707198fe18e.mockapi.io/tinhpv10/students')
-    .then((response) => {
-        response.json()
-            .then((data) => {
-               let apiHtml = document.getElementById('tableBody');
-               console.log(data);
-               data.forEach(function(student) {
-                let html = `
-                    <tr id="row_${student.id}">    
-                        <td>${student.id}</td>
-                        <td>${student.name}</td>
-                        <td><img src="${student.avatar}" alt=""></td>
-                        <td>${student.createdAt}</td>
-                        <td><button onclick="toggleVisibility(${student.id})">Hide 10s</button></td>
-                    </tr>`;
-                apiHtml.innerHTML += html;
-            });
-            });
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-    function toggleVisibility(studentId) {
-        let row = document.getElementById(`row_${studentId}`);
-        row.style.display = 'none';
+// // =================Bài 1==================
+// let promise = new Promise(function(resolve,reject){
+//     resolve(1);
+//     setTimeout(() =>resolve(2),1000);
+// });
+// promise
+// .then(alert);
+// // // =================Bài 2=================
+// const axios = require('axios');
+// 1
+// async function fetchUrls(urls){
+//     const results = [];
+//     for (const url of urls) {
+//         const res = await axios.get(url);
+//         results.push(res);
+//     }
+//     return results;
+// }
+// fetchUrls('');
+// // 2
+// async function fetchUrlsParallel(urls){
+//     const results = await Promise.all(
+//         urls.map(function(url){
+//             return axios.get(url);
+//         })
+//     );
+//     return results;
+// }
+// // ==============Bài 3===========
+// const fs = require('fs').promises;
+// const axios = require('axios');
+// async function fetchData() {
+//     try {
+//         const data = await fs.readFile('db.json', {
+//             encoding: 'utf8'
+//         });
+//         console.log('Data loaded from disk:', data);
+//         const response = await axios.get('https://65929f4fbb129707198fe18e.mockapi.io/tinhpv10/students');
+//         console.log('Data downloaded from url:', response.data);
+//     } catch (error) {
+//         console.error('Error:', error.message);
+//     }
+// }
+// fetchData();
+// // ============Bài 4==================
+// async function runPromises() {
+//     try {
+//       const result1 = await new Promise((resolve, reject) => {
+//         setTimeout(() => resolve("Promise 1!"), 2000);
+//       });
+//       console.log(result1);
+//       const result2 = await new Promise((resolve, reject) => {
+//         setTimeout(() => resolve("Promise 2!"), 1000);
+//       });
+  
+//       console.log(result2);
+//     } catch (error) {
+//       console.error('Error:', error.message);
+//     }
+//   }
+//   runPromises();
+  
 
-        setTimeout(() => {
-            row.style.display = 'table-row';
-        }, 10000);
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Promiss 1!"), 2000)
+});
+
+let promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Promiss 2!"), 1000)
+});
+
+promise.then(
+    function (value) {
+        console.log(value);
     }
+)
+promise2.then(
+    function (value) {
+        console.log(value);
+    }
+)
+
+async function promiseAll(){
+    
+} 
